@@ -156,7 +156,7 @@ const JSONAPIAdapter = RESTAdapter.extend({
     options.contentType = 'application/vnd.api+json';
 
     let hash = this._super(url, type, options);
-    hash.headers['Accept'] = 'application/vnd.api+json';
+    hash.headers['Accept'] = options.Accept || 'application/vnd.api+json';
     return hash;
   },
 
